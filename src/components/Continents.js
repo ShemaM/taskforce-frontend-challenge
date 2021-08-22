@@ -3,7 +3,6 @@ import Itemcoursel from 'react-items-carousel';
 import { useDispatch, useSelector } from 'react-redux';
 import { allContinents } from '../actions/continentsActions';
 import { useWindowSize } from '../util/Resize';
-import ArrowLeft from '../assets/ic-arrows-left.svg';
 import ArrowRight from '../assets/ic-arrows-right.svg';
 import ContinentContainer from './resuableComponents/ContinentContainer';
 
@@ -38,7 +37,7 @@ function Continents() {
           showSlither={true}
           leftChevron={
             <button className='arrow-left'>
-              <img src={ArrowLeft} alt='' />
+              <img src={ArrowRight} alt='' />
             </button>
           }
           rightChevron={

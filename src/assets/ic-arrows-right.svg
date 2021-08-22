@@ -1,1 +1,47 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="25.452" height="16.17" viewBox="0 0 25.452 16.17"><defs><style>.a{fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:bevel;stroke-width:1.5px;}</style></defs><g transform="translate(8.953 5.821)"><g transform="translate(-8.07 -4.76)"><line class="a" x1="23.818" transform="translate(0.001 7.054)"/><path class="a" d="M10.423,7.22,4.358,13.285a1.476,1.476,0,0,0,0,2.081l5.9,5.9" transform="translate(-3.929 -7.22)"/></g></g></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg14"
+   version="1.1"
+   viewBox="0 0 25.452 16.17"
+   height="16.17"
+   width="25.452">
+  <metadata
+     id="metadata18">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs4">
+    <style
+       id="style2">.a{fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:bevel;stroke-width:1.5px;}</style>
+  </defs>
+  <g
+     id="g12"
+     transform="translate(8.953 5.821)">
+    <g
+       id="g10"
+       transform="translate(-8.07 -4.76)">
+      <line
+         id="line6"
+         transform="translate(0.001 7.054)"
+         x1="23.818"
+         class="a" />
+      <path
+         id="path8"
+         transform="translate(-3.929 -7.22)"
+         d="M10.423,7.22,4.358,13.285a1.476,1.476,0,0,0,0,2.081l5.9,5.9"
+         class="a" />
+    </g>
+  </g>
+</svg>

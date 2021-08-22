@@ -6,7 +6,6 @@ function Nav() {
     <nav className='nav section'>
       <div className='nav-container'>
         <img className='nav-logo' src={Logo} alt='logo for covicalc website' />
-
         <button className='nav-btn'>Contact</button>
       </div>
     </nav>
