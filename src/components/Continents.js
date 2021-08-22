@@ -33,7 +33,7 @@ function Continents() {
           requestToChangeActive={setActiveItemIndex}
           activeItemIndex={activeItemIndex}
           numberOfCards={size && size.width >= 900 ? 3 : 1}
-          gutter={20}
+          gutter={70}
           showSlither={true}
           leftChevron={
             <button className='arrow-left'>
