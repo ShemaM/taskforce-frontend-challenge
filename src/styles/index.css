@@ -104,7 +104,7 @@ img {
   margin: 0 auto;
   text-align: center;
   background-color: #1e776e;
-  padding: 2.188rem;
+  padding: 10rem 2.188rem;
   border-radius: 2.5px;
 }
 
@@ -120,11 +120,19 @@ img {
 .section-three--container {
   width: 70%;
   margin: 0 auto;
-  text-align: center;
   background-color: #ffffff;
   padding: 1rem;
   border-radius: 2.5px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.section-three--card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .section-three--title {
@@ -133,7 +141,7 @@ img {
 }
 
 .section-three--text {
-  margin: 0.5rem;
+  margin: 0.5rem 0;
 }
 
 .section-three--subTilte {
@@ -359,9 +367,19 @@ img {
   }
 }
 
+@media (min-width: 800px) {
+  .section-three--container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .section-two--container {
+    padding: 2.188rem;
+  }
+}
+
 @media (min-width: 1100px) {
   .section-four--container {
-    /* width: 60%; */
     margin: 0 auto;
   }
 }
