@@ -1,0 +1,3 @@
+exclude_patterns:
+  - 'src/reducers'
+  - 'src/__test__'

@@ -34,10 +34,12 @@ function CountryDetails() {
         <form className='section-one--form section' onSubmit={submitHandler}>
           <select
             className='section-one--language form-item'
+            defaultValue='Rwanda'
+            defaultChecked='Rwanda'
             onChange={(e) => setSelected(e.target.value)}
           >
             {countries.map((country) => (
-              <option>{country.country}</option>
+              <option value={country.country}>{country.country}</option>
             ))}
           </select>
           <input className='section-one--date form-item' type='date' />
