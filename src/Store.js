@@ -2,12 +2,12 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { continentsListReducers } from './reducers/continentsReducers';
-import { countriesListReducers } from './reducers/countriesReducers';
+import { statesListReducers } from './reducers/statesReducers';
 
 const initialState = {};
 const reducer = combineReducers({
   continentsList: continentsListReducers,
-  countriesList: countriesListReducers,
+  statesList: statesListReducers,
 });
 
 const middleware = [thunk];

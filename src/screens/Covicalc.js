@@ -2,7 +2,7 @@ import React from 'react';
 
 import Nav from '../components/Nav';
 import Continents from '../components/Continents';
-import Countries from '../components/Countries';
+import States from '../components/States';
 import Profile from '../components/Profile';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
@@ -14,7 +14,7 @@ function Covicalc() {
         <Nav />
       </header>
       <main className='main'>
-        <Countries />
+        <States />
         <Continents />
         <Profile />
         <Contact />

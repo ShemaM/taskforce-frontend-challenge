@@ -47,6 +47,7 @@ img {
 }
 
 .nav-btn {
+  text-decoration: none;
   padding: 0.2rem 1rem;
   background: #1e776e;
   border: none;
@@ -154,7 +155,8 @@ img {
 }
 
 .section-three--subTilte {
-  color: #e0e0e0;
+  font-size: medium;
+  color: #a6a6a6;
 }
 
 .arrow-left,
