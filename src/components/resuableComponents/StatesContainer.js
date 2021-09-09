@@ -7,52 +7,44 @@ import PropTypes from 'prop-types';
  * @return  {JSX}            Continent data
  */
 
-function CountriesContainer({ country }) {
+function StatesContainer({ state }) {
   return (
     <div className='section-three--container'>
       <div className='section-three--card'>
         <h2 className='section-three--title'>
-          {country.oneTestPerPeople.toLocaleString()}
+          {state.testsPerOneMillion.toLocaleString()}
         </h2>
         <p className='section-three--text'>Tests</p>
         <h5 className='section-three--subTilte'>
-          {country.tests.toLocaleString()}
+          {state.tests.toLocaleString()}
         </h5>
       </div>
       <div className='section-three--card'>
         <h2 className='section-three--title'>
-          {country.todayCases.toLocaleString()}
+          {state.todayCases.toLocaleString()}
         </h2>
         <p className='section-three--text'>Positive Cases</p>
         <h5 className='section-three--subTilte'>
-          {country.active.toLocaleString()}
+          {state.active.toLocaleString()}
         </h5>
       </div>
       <div className='section-three--card'>
-        <h2 className='section-three--title'>
-          {country.criticalPerOneMillion.toLocaleString()}
-        </h2>
+        <h2 className='section-three--title'>-</h2>
         <p className='section-three--text'>Hospitalized</p>
-        <h5 className='section-three--subTilte'>
-          {country.critical.toLocaleString()}
-        </h5>
+        <h5 className='section-three--subTilte'>-</h5>
       </div>
       <div className='section-three--card'>
-        <h2 className='section-three--title'>
-          {country.todayRecovered.toLocaleString()}
-        </h2>
+        <h2 className='section-three--title'>-</h2>
         <p className='section-three--text'>Recovery</p>
-        <h5 className='section-three--subTilte'>
-          {country.recovered.toLocaleString()}
-        </h5>
+        <h5 className='section-three--subTilte'>-</h5>
       </div>
       <div className='section-three--card'>
         <h2 className='section-three--title'>
-          {country.todayDeaths.toLocaleString()}
+          {state.todayDeaths.toLocaleString()}
         </h2>
         <p className='section-three--text'>Deaths</p>
         <h5 className='section-three--subTilte'>
-          {country.deaths.toLocaleString()}
+          {state.deaths.toLocaleString()}
         </h5>
       </div>
       <div className='section-three--card'>
@@ -64,7 +56,7 @@ function CountriesContainer({ country }) {
   );
 }
 
-CountriesContainer.propTypes = {
+StatesContainer.propTypes = {
   name: PropTypes.string.isRequired,
   oneTestPerPeople: PropTypes.number.isRequired,
   tests: PropTypes.number.isRequired,
@@ -78,7 +70,7 @@ CountriesContainer.propTypes = {
   deaths: PropTypes.number.isRequired,
 };
 
-CountriesContainer.defaultProps = {
+StatesContainer.defaultProps = {
   name: 'name',
   oneTestPerPeople: 0,
   tests: 0,
@@ -92,4 +84,4 @@ CountriesContainer.defaultProps = {
   deaths: 0,
 };
 
-export default CountriesContainer;
+export default StatesContainer;

@@ -7,7 +7,9 @@ function Nav() {
       <div className='nav-container'>
         <img className='nav-logo' src={Logo} alt='logo for covicalc website' />
         <button className='nav-btn'>
-          <a href='#contact'>Contact</a>
+          <a className='nav-btn' href='#contact'>
+            Contact
+          </a>
         </button>
       </div>
     </nav>

@@ -1,25 +1,32 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { allCountries } from '../actions/countriesActions';
-import CountriesContainer from './resuableComponents/CountriesContainer';
+import { allStates } from '../actions/stateActions';
+import StatesContainer from './resuableComponents/StatesContainer';
 
-function CountryDetails() {
-  const [selectedCountry, setSelectedCountry] = useState([]);
-  const [selected, setSelected] = useState([{ country: 'Rwanda' }]);
+function Details() {
+  const [selectedState, setSelectedState] = useState([]);
+  const [selected, setSelected] = useState([]);
 
   const dispatch = useDispatch();
 
-  const { countries } = useSelector((state) => state.countriesList);
+  const { states } = useSelector((state) => state.statesList);
 
   useEffect(() => {
-    dispatch(allCountries());
+    dispatch(allStates());
   }, [dispatch]);
+
+  useEffect(() => {
+    const capital = states.filter((state) => {
+      return state.state.includes('Washington');
+    });
+    setSelectedState(capital);
+  }, [states]);
 
   const submitHandler = (e) => {
     e.preventDefault();
-    setSelectedCountry(
-      countries.filter((country) => {
-        return country.country.includes(selected);
+    setSelectedState(
+      states.filter((state) => {
+        return state.state.includes(selected);
       }),
     );
   };
@@ -29,7 +36,7 @@ function CountryDetails() {
       <section className='section-one'>
         <div className='section-one--header section'>
           <h1 className='section-one--title'>UPDATES</h1>
-          <p className='section-one--text'>Search a country</p>
+          <p className='section-one--text'>Search a State</p>
         </div>
 
         <form className='section-one--form section' onSubmit={submitHandler}>
@@ -37,8 +44,9 @@ function CountryDetails() {
             className='section-one--language form-item'
             onChange={(e) => setSelected(e.target.value)}
           >
-            {countries.map((country) => (
-              <option required>{country.country}</option>
+            <option value='Washington'>Washington</option>
+            {states.map((state) => (
+              <option required>{state.state}</option>
             ))}
           </select>
           <input className='section-one--date form-item' type='date' required />
@@ -46,7 +54,7 @@ function CountryDetails() {
         </form>
       </section>
       <section className='section-two'>
-        {selectedCountry.map((total) => (
+        {selectedState.map((total) => (
           <div className='section-two--container'>
             <h1 className='section-two--title'>
               {total.cases.toLocaleString()}
@@ -56,12 +64,12 @@ function CountryDetails() {
         ))}
       </section>
       <section className='section-three'>
-        {selectedCountry.map((country) => (
-          <CountriesContainer country={country} />
+        {selectedState.map((state) => (
+          <StatesContainer state={state} />
         ))}
       </section>
     </>
   );
 }
 
-export default CountryDetails;
+export default Details;
